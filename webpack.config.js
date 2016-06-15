@@ -5,7 +5,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://127.0.0.1:3000', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
-    './js/manage.js' // Your appʼs entry point
+    './js/index.js' // Your appʼs entry point
   ],
   output: {
     path: __dirname + '/js/',
@@ -16,7 +16,8 @@ module.exports = {
     loaders: [
       { test: /\.(css)$/, loader: 'style-loader!css-loader' },
       { test: /\.less$/, loader: 'style-loader!css-loader?importLoaders=1!less-loader' },
-      { test: /\.jsx?$/, loaders: ['react-hot', 'jsx?harmony'], exclude: /node_modules/ }
+      { test: /\.jsx?$/, loaders: ['react-hot', 'jsx?harmony'], exclude: /node_modules/ },
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
     ]
   },
   resolve: {

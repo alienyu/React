@@ -16,13 +16,17 @@ var List = React.createClass({
         })
         return (
             <table className="publicTableList">
-                <tr>
-                    <th>工号</th>
-                    <th>姓名</th>
-                    <th>手机号</th>
-                    <th>操作</th>
-                </tr>
-                {listNode}
+                <thead>
+                    <tr>
+                        <th>工号</th>
+                        <th>姓名</th>
+                        <th>手机号</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {listNode}
+                </tbody>
             </table>
         )
     }

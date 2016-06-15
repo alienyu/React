@@ -27,32 +27,20 @@ var listData = [
         name:"dsgd",
         mobile: "1332423432",
         ops: "dsgs"
-    },
-    {
-        number:1,
-        name:"dsgd",
-        mobile: "1332423432",
-        ops: "dsgs"
-    },
-    {
-        number:1,
-        name:"dsgd",
-        mobile: "1332423432",
-        ops: "dsgs"
     }
 ]
 document.body.appendChild(node);
-var Manage = React.createClass({
+var ManageTwo = React.createClass({
     render: function() {
         return (
-        <div>
+            <div>
             <Head />
             <Menu />
             <div className="rightDiv">
-                <div className="rightContent">
-                    <span className="conPubTitile">员工列表</span>
-                <div className="conWrap">
-                <List data={listData} />
+            <div className="rightContent">
+            <span className="conPubTitile">员工列表</span>
+            <div className="conWrap">
+            <List data={listData} />
             <div className="pagingWrap">
             <ul className="pagination ">
             <li><a href="#">上一页</a></li>
@@ -72,11 +60,12 @@ var Manage = React.createClass({
         )
     }
 })
+
+module.exports = ManageTwo;
 //ReactDom.render(
-//    <Manage />,node
+//<ManageTwo />,node
 //);
 
-module.exports = Manage;
 /**
  * Created by w10001901 on 2016/6/8.
  */
